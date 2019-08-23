@@ -1,0 +1,28 @@
+<html>
+
+<head>
+</head>
+
+<body>
+  <div>
+    <input type="text" id="box" value="" onchange=showCatagory() style="width:100%;" />
+  </div>
+  <div>
+    กดที่กล่องข้อความด้านบน ^ แล้วกดปุ่มที่เป็นรูปไมโครโฟนใน keyboard เพื่อเริ่มพูด
+  </div>
+  <span id="out"></span>
+
+
+  <script src="wordcut-min.js"></script>
+  <script src="func.js"></script>
+
+  <script>
+    showCatagory = () => {
+      var res = dataS(document.getElementById('box').value)
+      console.log(res)
+      document.getElementById("out").innerHTML = JSON.stringify(res);
+    }
+  </script>
+</body>
+
+</html>
